@@ -1,0 +1,93 @@
+------------------------------------------------------------------------------------
+Version 2.0.1
+30-Nov-2013
+	
+	Fixed - If '#' character was found in config where SSH was the connection type. Config download would fail at '#'
+
+------------------------------------------------------------------------------------
+Version 2.0.0
+07-Sept-2013
+	
+	Added - Compliance Manager Feature
+	Fixed - Minor Code fixes
+
+------------------------------------------------------------------------------------
+Version 1.2.9
+06-Sept-2013
+	
+	Fixed - Fixed scheduler where all nodes where being add to a task
+	Fixed - Updated code to allow for HTTP or HTTPs rConfig UI
+	Fixed - Backup archives not deleting
+	Added - Update Copyright Year
+	Added - Extended field for telnet/SSH port numbers to allow up to 5 numbers i.e. port 22222
+
+------------------------------------------------------------------------------------
+Version 1.2.8
+21-Jun-2012
+	
+	Fixed - Whitespace not allowed in hostname for devices for - will cause file system level foldername problems
+	Added - no html form autocomplete allowed for username and password - you should use the 'default username/password function'
+
+------------------------------------------------------------------------------------
+Version 1.2.7
+05-Jun-2012
+	
+	Added - Purge configs older than X days feautre on configoverview.php page
+
+------------------------------------------------------------------------------------
+Version 1.2.6
+01-Jun-2012
+	
+	Update - Allowed passconf, enableMode Checkbox and Enable password to be returned to devices form on submission error
+
+------------------------------------------------------------------------------------
+Version 1.2.5
+31-Jan-2012
+	
+	Fixed - Enable mode checkbox not working on device add form
+	
+------------------------------------------------------------------------------------
+Version 1.2.4
+6-Jan-2012
+	
+	Added - Feature to retain devices form fill-in information when submitted and errors returned
+	Fixed - Easy update to remove install dir after update is completed
+	Fixed - 'Undefined variable: i in /home/rconfig/lib/showCmdScript.php' notice when running from CLI
+	Fixed - HTTP_HOST not set error when running showCmdScript.php from CLI
+	
+------------------------------------------------------------------------------------
+Version 1.2.0
+6-Jan-2012
+	
+	Added - Easy rConfig Update installation feature
+	Fixed - Broken Footer Links
+	Fixed - Installation final page and checklist
+	
+------------------------------------------------------------------------------------
+Version 1.1.2
+31-Dec-2012
+	
+	Added - Version information to footer
+	Added - Hyperlink to remove install directory from 'install dir' banner warning
+
+------------------------------------------------------------------------------------
+Version 1.0.11
+21-Dec-2012
+
+	Fixed - Update lib/showCmdScript.php to use SmtpFromAddr from Db, not not hardcoded 'from' address for sending mail
+	Fixed - could not delete categories due to misconfigured crud path
+	Fixed - Updated installer to display 'WANOptimizers' under categories as no spaces allowed in categories
+	Added - Request to reduce username lenght to 4
+	Fixed - Issue where if 'data' dir was emtpy, PHP Notice:  Undefined variable: files in /home/rconfig/config/functions.inc.php on line 221 (scan_dir()) function
+	Fixed - Issue where could not delete compareReports becuase wrong path was referenced in reports.php
+	Fixed - issue if showCmdScript.php was run on shell by another user, it would reset perms for data directory. 
+				Added some checking to showCmdScript.php see how script was run and change back owner to apache if script was run from shell
+	Fixed - duplicate '<?php' from devices.crud.php
+	Fixed - PHP Notice:  Undefined variable: categories in ...scheduler.crud.php when adding task for devices only
+	Fixed - Full backup not backing up MySQL DB
+
+------------------------------------------------------------------------------------
+Version 1.0.0
+14-Dec-2012
+
+	rConfig Released
